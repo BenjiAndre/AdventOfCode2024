@@ -6,7 +6,9 @@ public class Day03 extends Main.Day {
     @Override
     public String[] solve(List<String> input) {
         long part1 = 0, part2 = 0;
-        Pattern pattern = Pattern.compile("(mul\\((\\d{1,3}),(\\d{1,3})\\)|do\\(\\)|don't\\(\\))");
+        Pattern pattern = Pattern.compile(
+            "(mul\\((\\d{1,3}),(\\d{1,3})\\)|do\\(\\)|don't\\(\\))"
+        );
         boolean isEnabled = true;
 
         for (String line : input) {
@@ -29,10 +31,6 @@ public class Day03 extends Main.Day {
             }
         }
 
-        return new String[] {
-            Long.toString(part1),
-            Long.toString(part2)
-        };
+        return new String[] { Long.toString(part1), Long.toString(part2) };
     }
-
 }
